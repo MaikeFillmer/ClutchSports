@@ -27,6 +27,14 @@
 	  position: relative;
 }
 
+#page3 {
+	background: url("images/cKmjwnG.jpg") 50% 0 repeat fixed; min-height: 1000px; 
+  	height: 1500px; 
+  	margin: 0 auto; 
+  	width: 100%; 
+  	max-width: 1920px; 
+  	position: relative;
+}
 
 .jumbotron {
 	background-color: transparent;
