@@ -1,16 +1,17 @@
 
 #home { 
 	   background: url("images/gameslam_05.jpg") 50% 0 repeat fixed; min-height: 1000px; 
-  		height: 750px; 
+  		height: 250px; 
  		 margin: 0 auto; 
   		width: 100%; 
   		max-width: 1920px; 
  		 position: relative;
+ 		 margin-top: 50px;
 }
 
 #page1 {
 	   background: url("images/Basketball-Court_Landscape.jpg") 50% 0 repeat fixed; min-height: 1000px; 
-  	height: 750px; 
+  	height: 1500px; 
   	margin: 0 auto; 
   	width: 100%; 
   	max-width: 1920px; 
@@ -18,7 +19,7 @@
 }
 
 #page2 {
-		background: url("images/field-of-dreams-2.png") 50% 0 repeat fixed; min-height: 1000px; 
+		background: url("images/baseball.jpg") 50% 0 repeat fixed; min-height: 1000px; 
  	 height: 1000px; 
 	  margin: 0 auto; 
 	  width: 100%; 
@@ -30,11 +31,26 @@
 .jumbotron {
 	background-color: transparent;
 	color: white;
+	margin-top: 30px;
 }
 
 h4 {
 	color: white;
 }
+.container-fluid {
+ 	background: rgb(56,56,56);
+ }
+ 
+ 
+ 
+ #jumbotronID {
+ 	background: rgba(32,32,32, 0.5);
+ }
+ 
+ #sportsSearch {
+ 	color: white;
+ 	background: rgba(32,32,32, 0.5);
+ }
 
 h3 {
 	font-size: 20px;
@@ -43,8 +59,8 @@ h3 {
 
 #events {
 	color: white;
-	background-color: black;
-	opacity: 0.7;
+	background: rgba(32,32,32, 0.7);
+ 	margin-top: 25px;;
 }
 
 #eventsText {
@@ -53,8 +69,12 @@ h3 {
 
 #socialMedia {
 	color: white;
+	background: rgba(32,32,32, 0.7);
+ 	margin-top: 25px;
 }
 
 #newsArticles {
 	color: white;
+	background: rgba(32,32,32, 0.7);
+ 	margin-top: 50px;
 }

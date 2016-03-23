@@ -13,32 +13,58 @@
 
 <body>
 
-
+<nav class="navbar navbar-inverse navbar-fixed-top">
+	<div class="container-fluid">
+ 	<!-- Brand and toggle get grouped for better mobile display -->
+	<div class="navbar-header">
+     
+       <a class="navbar-brand" href="#home">Back to the top</a>
+     </div>
+ 
+     <!-- Collect the nav links, forms, and other content for toggling -->
+     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+       <ul class="nav navbar-nav">
+         
+       </ul>
+       
+       <ul class="nav navbar-nav navbar-right">
+ 		 <li class="active"><a href="#page1">Events <span class="sr-only">(current)</span></a></li>
+         <li><a href="#page2">News</a></li>
+ 
+       </ul>
+     </div><!-- /.navbar-collapse -->
+   </div><!-- /.container-fluid -->
+ </nav>
 
 	<section id="home" data-type="background" data-speed="10" class="pages">
 	<div class="row">
 
-	<div class="jumbotron">
+	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+ 		
+ 		</div>
+ 
+ 		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+ 		<div class="jumbotron" id="jumbotronID">
 		<div class="container">
 			<h1 class="text-center">Clutch Sports</h1>
 
 			<h4 class="text-center">Search a sports team to get info.</h4>
 		</div>
 	</div>
-
+	</div>
 	</div>
 
 	<div class="row">
 	
-		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+		<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
 	
 		</div>
 
-		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 		
 			<form>
   			<div class="form-group">
-    		<label for="exampleInputEmail1">Enter a Sports Team</label>
+    		<label for="sportsSearch" id="sportsSearch">Enter a Sports Team</label>
    			 <input type="team" class="form-control" id="teamName" placeholder="Team">
   			<br>
   			<button type="submit" class="btn btn-default" id="search"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search</button>
@@ -54,18 +80,19 @@
 	
 		
 
-		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" id="events">
+		<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5" id="events">
 		
 		<h2>Upcoming Events</h2>
 		<div id="eventsText">
 		
 		</div>
-		
-	
 		</div>
+		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+ 	
+ 		</div>
 		
 
-		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" id="socialMedia">
+		<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5" id="socialMedia">
 		<h2>Trending Tweets</h2>
 		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium quos facere inventore repellat, expedita quam laudantium, enim quibusdam ipsa quod porro repellendus, neque placeat modi maiores. Minima quia atque ex!
 		
