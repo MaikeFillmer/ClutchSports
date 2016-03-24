@@ -181,6 +181,7 @@
             	}
 	$('#search').on('click', function() {
 		var search = $('#teamName').val().trim();;
+		search = search.toLowerCase();
 
 		search = search.split(' ').join('-');
 
@@ -214,8 +215,10 @@
             		var ticketDiv = $('<div id="item" data-number=' + i+'>')
             		ticketDiv.addClass('well');
 	            	var h = $('<h3>').text(ticketResults[i].name);
+	            	h.attr('class', 'heading');
 	            	var l = $('<p>').text(ticketResults[i].location);
 	            	var t = $('<p>').text(ticketResults[i].time);
+	            	t.attr('class', 'time');
 	            	ticketDiv.append(h, l, t);
 
 	            	if(i<=4){
@@ -320,9 +323,11 @@
 	            		var ticketDiv = $('<div id="item2" data-number=' + i+'>')
 	            		ticketDiv.addClass('well');
 		            	var h = $('<h3>').text(ticketResults2[i].name);
+		            	h.attr('class', 'heading');
 		            	var l = $('<p>').text('Location:  ' 
 		            		+ ticketResults2[i].location);
 		            	var t = $('<p>').text('Time:  ' + ticketResults2[i].time);
+		            	t.attr('class', 'time');
 		            	var u = 
 		            	ticketDiv.append(h, l, t);
 		            	if(i<=4){
