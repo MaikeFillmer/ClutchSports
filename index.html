@@ -38,6 +38,7 @@
  </nav>
 
 	<section id="home" data-type="background" data-speed="10" class="pages">
+	
 	<div class="row">
 
 	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
@@ -77,6 +78,7 @@
 	</section>
 
 	<section id="page1" data-type="background" data-speed="10" class="pages">
+	<div class="container">
 	<div class="row">
 	
 		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
@@ -90,39 +92,28 @@
 		
 		</div>
 		</div>
+		</div>
+		</div>
 		
 
-	</div>
+
 	</section>
 
+	
+
+
 	<section id="page2" data-type="background" data-speed="10" class="pages">
-	<div class="row">
-
-		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-			
-		</div>
+	<div class="container">
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="newsArticles">
 		
-		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8" id="newsArticles">
-		
-		<h2 class="text-center">News Articles</h2>
-		
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique accusamus, at. Harum eveniet quos atque fuga commodi tenetur, autem natus necessitatibus provident excepturi, in esse ipsa quas rem quasi quod!
-		<br>
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi commodi, consequuntur harum libero a delectus quis. Ducimus, mollitia. Voluptas quisquam molestias possimus ea eum porro dolorem enim nemo error dolore!
-		<br>
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque animi saepe dolorem iste quibusdam, aut itaque ducimus qui sequi! Similique minus quod sunt porro id temporibus. Ad, enim laudantium repudiandae?
-		<br>
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora voluptatibus totam veritatis soluta iusto, quia vel perspiciatis. Atque consectetur, officia dicta aut magni explicabo! Numquam sed labore hic molestias repellendus!
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique accusamus, at. Harum eveniet quos atque fuga commodi tenetur, autem natus necessitatibus provident excepturi, in esse ipsa quas rem quasi quod!
-		<br>
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi commodi, consequuntur harum libero a delectus quis. Ducimus, mollitia. Voluptas quisquam molestias possimus ea eum porro dolorem enim nemo error dolore!
-		<br>
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque animi saepe dolorem iste quibusdam, aut itaque ducimus qui sequi! Similique minus quod sunt porro id temporibus. Ad, enim laudantium repudiandae?
-		<br>
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora voluptatibus totam veritatis soluta iusto, quia vel perspiciatis. Atque consectetur, officia dicta aut magni explicabo! Numquam sed labore hic molestias repellendus!
-		</div>
-
-
+			<h2 class="text-center">News Articles</h2>
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" id="newsLeft">
+			</div>
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" id="newsCenter">
+			</div>
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" id="newsRight">
+			</div>
+	</div>
 	</div>
 	</section>
 
@@ -135,6 +126,7 @@
 
 		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8" id="events">
 		
+
 		<h2 class="text-center">Merchandise</h2>
 		
 		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique accusamus, at. Harum eveniet quos atque fuga commodi tenetur, autem natus necessitatibus provident excepturi, in esse ipsa quas rem quasi quod!
@@ -151,9 +143,11 @@
 		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque animi saepe dolorem iste quibusdam, aut itaque ducimus qui sequi! Similique minus quod sunt porro id temporibus. Ad, enim laudantium repudiandae?
 		<br>
 		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora voluptatibus totam veritatis soluta iusto, quia vel perspiciatis. Atque consectetur, officia dicta aut magni explicabo! Numquam sed labore hic molestias repellendus!
+
 		</div>
 			
 
+	</div>
 	</div>
 	</section>	
 
@@ -221,9 +215,72 @@
 	           	console.log(ticketResults);
 	           }
      			
-            });
-		return false;		//will keep results and not auto refresh
         });
+				search = search.split('-').join('+');
+				console.log(search);
+				//AJAX call to search for news articles
+				$.ajax({
+		        url: 'https://www.googleapis.com/customsearch/v1?q=' + search + '&cx=011101858926978562708%3Abyfxhjvymhs&key=AIzaSyCosQeZ1wcWPFJGUlzPMfsAVGHzttA4YDQ',
+		        method: 'GET'
+		     }).done(function(response) {
+		      //Gets 9 articles from response
+		      for(var i = 1; i < 10; i++)
+		      {
+		      	//Stores object data of the articles
+		        var currentStory = response.items[i];
+		        //Stores data pulled from the page of the article
+		        var currentStoryPagemap = response.items[i].pagemap;
+		        //The all encompassing div that contains all data for a particular story
+		        var newsDiv = $('<div>');
+		        newsDiv.addClass('well');
+		        //The title of the news story
+		        var newsTitle = $('<h3>');
+		        newsTitle.addClass('newsTitle');
+		        newsTitle.html(currentStoryPagemap.article[0].name);
+		        //Adds news title to the individual news story div
+		        newsDiv.append(newsTitle);
+		        //The article body. A snippet of the actual article. Will contain the thumbnail image in the p tag for formatting
+						var newsBody = $('<p>');
+						//Thumbnail image tag
+		        var newsImg = $('<img>');
+		        newsImg.attr('src', currentStoryPagemap.cse_thumbnail[0].src);
+		        newsImg.addClass('newsPics');
+		        newsBody.append(newsImg);
+		        newsBody.addClass('articlebody');
+		        newsBody.append(currentStoryPagemap.article[0].articlebody);
+		        //Adds the body, containing snippet and image, to individual news story div
+		        newsDiv.append(newsBody);
+		        newsDiv.append('<br>');
+		        //The link to the article on bleacherreport
+		        var newsLink = $('<a>');
+		        newsLink.addClass('newsLink');
+		        newsLink.attr('href', currentStoryPagemap.article[0].url)
+		        newsLink.html('read more');
+		        //Appends the link to the individual news story div
+		        newsDiv.append(newsLink);
+		        //Date the article was published
+		        var datePub = $('<p>');
+        		datePub.addClass('datePub');
+        		datePub.html("Date: " +currentStoryPagemap.article[0].datepublished);
+        		//Appends date to news story div
+        		newsDiv.append(datePub);
+        		//Displays news stories horizontally, 3 per row
+		        if(i == 1 || i == 4 || i == 7)
+		        {
+		          $('#newsLeft').append(newsDiv);
+		        }
+		        if(i == 2 || i == 5 || i == 8)
+		        {
+		          $('#newsCenter').append(newsDiv);
+		        }
+		        if(i == 3 || i == 6 || i == 9)
+		        {
+		          $('#newsRight').append(newsDiv);
+		        }
+		      }
+		     });	
+				return false;		//will keep results and not auto refresh
+		  });
           
 		window.onload = function(){
 	        var today = moment().format("YYYY-MM-DD");
