@@ -1,4 +1,3 @@
-
 #home { 
 	   background: url("images/gameslam_05.jpg") 50% 0 repeat fixed; min-height: 1000px; 
   		height: 1000px; 
@@ -95,6 +94,25 @@ h3 {
 	background: rgba(32,32,32, 0.7);
  	margin-top: 50px;
  	height: 1150px;
+}
+
+#merchandise {
+
+color: white;
+	background: rgba(32,32,32, 0.7);
+ 	margin-top: 25px;
+ 	margin-top: 50px;
+ 	height: 1150px;
+ 	overflow: auto;
+ 	
+
+}
+
+#merchandiseDiv {
+	margin: auto;
+	margin-bottom: 10px;
+	
+
 }
 
 .newsPics {
