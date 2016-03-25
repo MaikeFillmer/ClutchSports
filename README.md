@@ -6,8 +6,8 @@
 
 ##APIs Used:
 * Seat Geek
-  * Retrieves ticket information for the next ten games for the sports team
+  * Retrieves ticket information for the next ten games for the sports team (http://platform.seatgeek.com/)
 * Google Custom Search
-  * Shows relevent news articles from Bleacher Report
+  * Shows relevent news articles from Bleacher Report (https://developers.google.com/custom-search/json-api/v1/overview)
 * Ebay
-  * Displays team merchendise 
+  * Displays team merchendise (https://go.developer.ebay.com/what-ebay-api)
