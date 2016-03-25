@@ -172,7 +172,10 @@
 	<script type="text/javascript">
 
 //Presentation: concept, design process, how it work, describe use case using a demo
-		
+		var keys =
+		 ['AIzaSyCosQeZ1wcWPFJGUlzPMfsAVGHzttA4YDQ',
+		 'AIzaSyDwR5Jk9x--eTgE1o7dgt_ZTc-zI2ZalVA',
+		 'AIzaSyAuoDyUd1UVUigKWG0XbgNpCot-iQeLHKk'];
 
 		function toNiceDate(string) {
             		var splitString = string.split('T').join(' ')
@@ -234,9 +237,10 @@
         });
 				search = search.split('-').join('+');
 				console.log(search);
+				var key = 'AIzaSyAuoDyUd1UVUigKWG0XbgNpCot-iQeLHKk';
 				//AJAX call to search for news articles
 				$.ajax({
-		        url: 'https://www.googleapis.com/customsearch/v1?q=' + search + '&cx=011101858926978562708%3Abyfxhjvymhs&key=AIzaSyCosQeZ1wcWPFJGUlzPMfsAVGHzttA4YDQ',
+		        url: 'https://www.googleapis.com/customsearch/v1?q=' + search + '&cx=011101858926978562708%3Abyfxhjvymhs&key=' + key,
 		        method: 'GET'
 		     }).done(function(response) {
 		      //Gets 9 articles from response
