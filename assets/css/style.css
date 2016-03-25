@@ -124,3 +124,41 @@ h3 {
 	float: right;
 	margin-top: 12px;
 }
+
+@media screen and (max-width: 1199px) {
+	.newsPics {
+		height: 90px;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.newsPics {
+		height: 0px;
+	}
+	#page1 {
+		height: 1120px;
+	}
+	#page2 {
+		height: 1400px;
+	}
+	#newsArticles {
+		height: 1300px;
+	}
+	.datePub {
+		float: none;
+		margin-top: 0px;
+		margin-bottom: -10px;
+	}
+}
+
+@media screen and (max-width: 755px) {
+	#page1 {
+		height: 1450px;
+	}
+	#page2 {
+		height: 1650px;
+	}
+	#newsArticles {
+		height: 1550px;
+	}
+}
