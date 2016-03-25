@@ -1,7 +1,7 @@
 
 #home { 
 	   background: url("images/gameslam_05.jpg") 50% 0 repeat fixed; min-height: 1000px; 
-  		height: 250px; 
+  		height: 1000px; 
  		 margin: 0 auto; 
   		width: 100%; 
   		max-width: 1920px; 
@@ -11,7 +11,7 @@
 
 #page1 {
 	   background: url("images/Basketball-Court_Landscape.jpg") 50% 0 repeat fixed; min-height: 1000px; 
-  	height: 1500px; 
+  	height: 800px; 
   	margin: 0 auto; 
   	width: 100%; 
   	max-width: 1920px; 
@@ -20,13 +20,21 @@
 
 #page2 {
 		background: url("images/baseball.jpg") 50% 0 repeat fixed; min-height: 1000px; 
- 	 height: 1000px; 
+ 	 height: 1250px; 
 	  margin: 0 auto; 
 	  width: 100%; 
 	  max-width: 1920px; 
 	  position: relative;
 }
 
+#page3 {
+	background: url("images/cKmjwnG.jpg") 50% 0 repeat fixed; min-height: 1000px; 
+  	height: 1500px; 
+  	margin: 0 auto; 
+  	width: 100%; 
+  	max-width: 1920px; 
+  	position: relative;
+}
 
 .jumbotron {
 	background-color: transparent;
@@ -66,20 +74,27 @@ h3 {
  	margin-top: 25px;;
 }
 
-#eventsText:hover {
+#item:hover {
+	cursor: pointer;
+}
+#item2:hover {
 	cursor: pointer;
 }
 
-#socialMedia {
-	color: white;
-	background: rgba(32,32,32, 0.7);
- 	margin-top: 25px;
+.heading {
+	margin-top: -10px;
 }
+
+.time {
+	margin-bottom: -10px;
+}
+
 
 #newsArticles {
 	color: white;
 	background: rgba(32,32,32, 0.7);
  	margin-top: 50px;
+ 	height: 1150px;
 }
 
 .newsPics {
@@ -108,4 +123,42 @@ h3 {
 .datePub {
 	float: right;
 	margin-top: 12px;
+}
+
+@media screen and (max-width: 1199px) {
+	.newsPics {
+		height: 90px;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.newsPics {
+		height: 0px;
+	}
+	#page1 {
+		height: 1120px;
+	}
+	#page2 {
+		height: 1400px;
+	}
+	#newsArticles {
+		height: 1300px;
+	}
+	.datePub {
+		float: none;
+		margin-top: 0px;
+		margin-bottom: -10px;
+	}
+}
+
+@media screen and (max-width: 755px) {
+	#page1 {
+		height: 1450px;
+	}
+	#page2 {
+		height: 1650px;
+	}
+	#newsArticles {
+		height: 1550px;
+	}
 }
