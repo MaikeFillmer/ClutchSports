@@ -35,11 +35,11 @@ $(document).ready(function(){
       ticketResults = [];
       if(response.events.length == 0)
       { //will not show any results if none were found
-      	$("#eventsLeft").text("No Tickets Available in the Near Future")
+      	$("#eventsLeft").text("No Tickets Available in the Near Future. Try searching ")
     	}
       else
       {
-       	for(i=0;i<10;i++)
+       	for(i=0;i<10;i++) //Iterate through the response and fill an array for ease of access of API information
        	{
        		ticketResults[i] = {
         		name: response.events[i].title,
@@ -47,7 +47,7 @@ $(document).ready(function(){
         		time: toNiceDate(response.events[i].datetime_local),
         		url: response.events[i].url
           }
-          var ticketDiv = $('<div id="item" data-number=' + i+'>')
+          var ticketDiv = $('<div id="item" data-number=' + i+'>') //create a ticket div id is for having a listener and data number is for displaying the right ticket infor when button is clicked
           ticketDiv.addClass('well');
 	        var h = $('<h3>').text(ticketResults[i].name);
 	        h.attr('class', 'heading');
@@ -55,7 +55,7 @@ $(document).ready(function(){
 	        var t = $('<p>').text(ticketResults[i].time);
 	        t.attr('class', 'time');
 	        ticketDiv.append(h, l, t);
-         	if(i<=4)
+         	if(i<=4) //sorting the ticket results into two columns
          	{
 	        	$("#eventsLeft").append(ticketDiv);
 	        }
@@ -135,8 +135,8 @@ $(document).ready(function(){
 		});	
 		return false;		//will keep results and not auto refresh
 	});
-  window.onload = function(){
-	  var today = moment().format("YYYY-MM-DD");
+  window.onload = function(){ //shows the soonest next sporting events
+	  var today = moment().format("YYYY-MM-DD"); //formatting the date to go into the API call
     var queryURL2 = "https://api.seatgeek.com/2/events?taxonomies.name=sports&datetime_utc.gt=" + today;
 		$.ajax({
 	    url: queryURL2,
