@@ -7,421 +7,330 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="assets/css/style.css">
 	<link rel="stylesheet" href="assets/css/reset.css">
-
 </head>
-
-
 <body>
-
-<nav class="navbar navbar-inverse navbar-fixed-top">
-	<div class="container-fluid">
- 	<!-- Brand and toggle get grouped for better mobile display -->
-	<div class="navbar-header">
-     
-       <a class="navbar-brand" href="#home">Back to the top</a>
-     </div>
- 
-     <!-- Collect the nav links, forms, and other content for toggling -->
-     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-       <ul class="nav navbar-nav">
-         
-       </ul>
-       
-       <ul class="nav navbar-nav navbar-right">
- 		 <li class="active"><a href="#page1">Events <span class="sr-only">(current)</span></a></li>
-         <li><a href="#page2">News</a></li>
-         <li class="active"><a href="#page3"> Merchandise <span class="sr-only">(current)</span></a></li>
- 
-       </ul>
-     </div><!-- /.navbar-collapse -->
-   </div><!-- /.container-fluid -->
- </nav>
-
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+ 		<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+     	 <a class="navbar-brand" href="#home">Back to the top</a>
+     	</div>
+ 			<!-- Collect the nav links, forms, and other content for toggling -->
+     	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      	<ul class="nav navbar-nav">
+      	</ul>
+      	<ul class="nav navbar-nav navbar-right">
+ 		 			<li class="active">
+ 		 				<a href="#page1">Events <span class="sr-only">(current)</span></a>
+ 		 			</li>
+      		<li>
+        		<a href="#page2">News</a>
+      		</li>
+      		<li class="active">
+        		<a href="#page3"> Merchandise <span class="sr-only">(current)</span></a>
+      		</li>
+ 				</ul>
+    	</div><!-- /.navbar-collapse -->
+   	</div><!-- /.container-fluid -->
+  </nav>
+	<!--Top of the page where the user enters their search term-->
 	<section id="home" data-type="background" data-speed="10" class="pages">
-	
-	<div class="row">
-
-	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
- 		
- 		</div>
- 
- 		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
- 		<div class="jumbotron" id="jumbotronID">
-		<div class="container">
-			<h1 class="text-center">Clutch Sports</h1>
-
-			<h4 class="text-center">Search a sports team to get info.</h4>
+		<div class="row">
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+ 			</div>
+ 			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+ 				<div class="jumbotron" id="jumbotronID">
+					<div class="container">
+						<h1 class="text-center">Clutch Sports</h1>
+						<h4 class="text-center">Search a sports team to get info.</h4>
+					</div>
+				</div>
+			</div>
 		</div>
-	</div>
-	</div>
-	</div>
-
-	<div class="row">
-	
-		<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-	
+		<div class="row">
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+			</div>
+			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+				<form>
+  				<div class="form-group">
+    				<label for="sportsSearch" id="sportsSearch">Enter a Sports Team</label>
+   			 		<input type="team" class="form-control" id="teamName" placeholder="Team">
+  					<br>
+  					<button type="submit" class="btn btn-default">
+  						<span class="glyphicon glyphicon-search" aria-hidden="true"></span> <a href="#page1">Search</a>
+  					</button>
+  				</div>
+				</form>
+			</div>	
 		</div>
-
-		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-		
-			<form>
-  			<div class="form-group">
-    		<label for="sportsSearch" id="sportsSearch">Enter a Sports Team</label>
-   			 <input type="team" class="form-control" id="teamName" placeholder="Team">
-  			<br>
-  			<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> <a href="#page1">Search</a></button>
-			</form>
-
-		</div>
-		
-	</div>
 	</section>
-
+	<!--Upcoming events section-->
 	<section id="page1" data-type="background" data-speed="10" class="pages">
-	<div class="container">
-	<div class="row">
-	
-		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-			
-		</div>
-
-		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8" id="events">
-		
-		<h2 class="text-center">Upcoming Events</h2>
-		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" id="eventsLeft">
-			
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+				</div>
+				<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8" id="events">
+					<h2 class="text-center">Upcoming Events</h2>
+					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" id="eventsLeft">
+					</div>
+					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" id="eventsRight">
+					</div>
+				</div>
 			</div>
-			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" id="eventsRight">
-			
-			</div>
-		
-		
 		</div>
-		</div>
-		</div>
-		
-
-
 	</section>
-
-	
-
-
+	<!--News articles section-->
 	<section id="page2" data-type="background" data-speed="10" class="pages">
-	<div class="container">
-	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="newsArticles">
-		
-			<h2 class="text-center">News Articles</h2>
-			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" id="newsLeft">
+		<div class="container">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="newsArticles">
+				<h2 class="text-center">News Articles</h2>
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" id="newsLeft">
+				</div>
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" id="newsCenter">
+				</div>
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" id="newsRight">
+				</div>
 			</div>
-			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" id="newsCenter">
-			</div>
-			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" id="newsRight">
-			</div>
-	</div>
-	</div>
+		</div>
 	</section>
-
+	<!--Merchandise section-->
 	<section id="page3" data-type="background" data-speed="10" class="pages">
-	<div class="container">
-
-	<div class="row">
-
-		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-			
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+				</div>
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+					<form>
+  					<div class="form-group">
+    					<h2 id="gearTitle" class="text-center">GEAR UP!!</h2>
+   			 			<input type="team" class="form-control" id="teamName2" placeholder="Search">
+  						<br>
+  						<button type="Submit" class="btn btn-default">
+  							<span class="glyphicon glyphicon-search" aria-hidden="true"></span> <a href="#page1">Search</a>
+  						</button>
+  					</div>
+					</form>
+				</div>
+			</div>
+			<div class ="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="merchandise">
+					<h2 class="text-center"></h2>
+				</div>
+			</div>
 		</div>
-		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-			
-		
-			<form>
-  			<div class="form-group">
-    		<h2 id="gearTitle" class="text-center">GEAR UP!!</h2>
-   			 <input type="team" class="form-control" id="teamName2" placeholder="Search">
-  			<br>
-  			<button type="Submit" class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> <a href="#page1">Search</a></button>
-			</form>
-</div>
-</div>
-
- 
- 		<div class ="row">
-
-		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="merchandise">
-		
-
-		<h2 class="text-center"></h2>
-		</div>
-			
-
-	</div>
-	</div>
 	</section>	
-
-
 </body>
-
-
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
 <script type="text/javascript" src="assets/javascript/logic.js"></script>
-
-<script type="text/javascript">
-	
-</script>
 <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-	<script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
-	<script type="text/javascript">
-
+<script type="text/javascript">
 //Presentation: concept, design process, how it work, describe use case using a demo
-		
-
-		function toNiceDate(string) {
-            		var splitString = string.split('T').join(' ')
-            		var date = moment(splitString).format("ddd, M/D h:mmA")
-            		return date;
-            	}
+	//The keys that we will use for the news search API.
+	var keys =
+	 ['AIzaSyAuoDyUd1UVUigKWG0XbgNpCot-iQeLHKk',
+		'AIzaSyDwR5Jk9x--eTgE1o7dgt_ZTc-zI2ZalVA',
+		'AIzaSyCosQeZ1wcWPFJGUlzPMfsAVGHzttA4YDQ'];
+	function toNiceDate(string) {
+  	var splitString = string.split('T').join(' ')
+  	var date = moment(splitString).format("ddd, M/D h:mmA")
+  	return date;
+  }
+  //When the button is clicked, we will get the search term that the user entered and use it in our API queries
 	$('button').on('click', function() {
 		var search = $('#teamName').val().trim();
 		search = search.toLowerCase();
-
 		search = search.split(' ').join('-');
-
-		console.log(search);
-
 		var queryURL = "https://api.seatgeek.com/2/events?performers.slug=" + search + "&client_id=NDM2Nzc5M3wxNDU4MjU1NzU4";
-		console.log(queryURL);
-        $.ajax({
-                url: queryURL,
-                method: 'GET'
-            })
-            .done(function(response) {
-            	$('#eventsLeft').empty();
-            	$('#eventsRight').empty();
-            	ticketResults = [];
-         	    console.log(response.events.length);
-
-         	    if(response.events.length == 0){ //will not show any results if none were found
-         	    	$("#eventsLeft").text("No Tickets Available in the Near Future")
-
-         	    }
-         	    else{
-            	for(i=0;i<10;i++){
-            		ticketResults[i] = {
-            			name: response.events[i].title,
-            			location: response.events[i].venue.display_location,
-            			time: toNiceDate(response.events[i].datetime_local),
-            			url: response.events[i].url
-            		}
-
-            		var ticketDiv = $('<div id="item" data-number=' + i+'>')
-            		ticketDiv.addClass('well');
-	            	var h = $('<h3>').text(ticketResults[i].name);
-	            	h.attr('class', 'heading');
-	            	var l = $('<p>').text(ticketResults[i].location);
-	            	var t = $('<p>').text(ticketResults[i].time);
-	            	t.attr('class', 'time');
-	            	ticketDiv.append(h, l, t);
-
-	            	if(i<=4){
-	            		$("#eventsLeft").append(ticketDiv);
-	            	}
-	            	else{
-	            		$("#eventsRight").append(ticketDiv);
-	            	}
-	            }
-	           	console.log(ticketResults);
-	           }
-	           return false;
-     			
-        });
-				search = search.split('-').join('+');
-				console.log(search);
-				//AJAX call to search for news articles
-				$.ajax({
-		        url: 'https://www.googleapis.com/customsearch/v1?q=' + search + '&cx=011101858926978562708%3Abyfxhjvymhs&key=AIzaSyCosQeZ1wcWPFJGUlzPMfsAVGHzttA4YDQ',
-		        method: 'GET'
-		     }).done(function(response) {
-		      //Gets 9 articles from response
-		      for(var i = 1; i < 10; i++)
-		      {
-		      	//Stores object data of the articles
-		        var currentStory = response.items[i];
-		        //Stores data pulled from the page of the article
-		        var currentStoryPagemap = response.items[i].pagemap;
-		        //The all encompassing div that contains all data for a particular story
-		        var newsDiv = $('<div>');
-		        newsDiv.addClass('well');
-		        //The title of the news story
-		        var newsTitle = $('<h3>');
-		        newsTitle.addClass('newsTitle');
-		        newsTitle.html(currentStoryPagemap.article[0].name);
-		        //Adds news title to the individual news story div
-		        newsDiv.append(newsTitle);
-		        //The article body. A snippet of the actual article. Will contain the thumbnail image in the p tag for formatting
-						var newsBody = $('<p>');
-						//Thumbnail image tag
-		        var newsImg = $('<img>');
-		        newsImg.attr('src', currentStoryPagemap.cse_thumbnail[0].src);
-		        newsImg.addClass('newsPics');
-		        newsBody.append(newsImg);
-		        newsBody.addClass('articlebody');
-		        newsBody.append(currentStoryPagemap.article[0].articlebody);
-		        //Adds the body, containing snippet and image, to individual news story div
-		        newsDiv.append(newsBody);
-		        newsDiv.append('<br>');
-		        //The link to the article on bleacherreport
-		        var newsLink = $('<a>');
-		        newsLink.addClass('newsLink');
-		        newsLink.attr('href', currentStoryPagemap.article[0].url)
-		        newsLink.html('read more');
-		        //Appends the link to the individual news story div
-		        newsDiv.append(newsLink);
-		        //Date the article was published
-		        var datePub = $('<p>');
-        		datePub.addClass('datePub');
-        		datePub.html("Date: " +currentStoryPagemap.article[0].datepublished);
-        		//Appends date to news story div
-        		newsDiv.append(datePub);
-        		//Displays news stories horizontally, 3 per row
-		        if(i == 1 || i == 4 || i == 7)
-		        {
-		          $('#newsLeft').append(newsDiv);
-		        }
-		        if(i == 2 || i == 5 || i == 8)
-		        {
-		          $('#newsCenter').append(newsDiv);
-		        }
-		        if(i == 3 || i == 6 || i == 9)
-		        {
-		          $('#newsRight').append(newsDiv);
-		        }
-		      }
-		     });	
-				return false;		//will keep results and not auto refresh
-		  });
-          
-		window.onload = function(){
-	        var today = moment().format("YYYY-MM-DD");
-
-	        console.log(today);
-	        var queryURL2 = "https://api.seatgeek.com/2/events?taxonomies.name=sports&datetime_utc.gt=" + today;
-
-			$.ajax({
-	                url: queryURL2,
-	                method: 'GET'
-	            })
-	            .done(function(response) {
-	            	console.log(response)
-	            	$('#eventsLeft').empty();
-	            	$('#eventsRight').empty();
-	            	ticketResults2=[];
-	            	for(i=0;i<10;i++){
-	            		ticketResults2[i] = {
-	            			name: response.events[i].title,
-	            			location: response.events[i].venue.display_location,
-	            			time: toNiceDate(response.events[i].datetime_local),
-	            			url: response.events[i].url
-	            		}
-	            		var ticketDiv = $('<div id="item2" data-number=' + i+'>')
-	            		ticketDiv.addClass('well');
-		            	var h = $('<h3>').text(ticketResults2[i].name);
-		            	h.attr('class', 'heading');
-		            	var l = $('<p>').text('Location:  ' 
-		            		+ ticketResults2[i].location);
-		            	var t = $('<p>').text('Time:  ' + ticketResults2[i].time);
-		            	t.attr('class', 'time');
-		            	var u = 
-		            	ticketDiv.append(h, l, t);
-		            	if(i<=4){
-		            		$("#eventsLeft").append(ticketDiv);
-		            		console.log(i);
-		            	}
-		            	else{
-		            		$("#eventsRight").append(ticketDiv);
-		            		console.log(i);
-		            		console.log(ticketDiv);
-		            	}
-	            	}
-	            	console.log(ticketResults2);
-	           
-
-	            });
-
-
-	        
-
-$('button').on('click', function() {
+    $.ajax({
+      url: queryURL,
+      method: 'GET'
+    }).done(function(response) {
+    	$('#eventsLeft').empty();
+      $('#eventsRight').empty();
+      ticketResults = [];
+      if(response.events.length == 0)
+      { //will not show any results if none were found
+      	$("#eventsLeft").text("No Tickets Available in the Near Future")
+    	}
+      else
+      {
+       	for(i=0;i<10;i++)
+       	{
+       		ticketResults[i] = {
+        		name: response.events[i].title,
+        		location: response.events[i].venue.display_location,
+        		time: toNiceDate(response.events[i].datetime_local),
+        		url: response.events[i].url
+          }
+          var ticketDiv = $('<div id="item" data-number=' + i+'>')
+          ticketDiv.addClass('well');
+	        var h = $('<h3>').text(ticketResults[i].name);
+	        h.attr('class', 'heading');
+	        var l = $('<p>').text(ticketResults[i].location);
+	        var t = $('<p>').text(ticketResults[i].time);
+	        t.attr('class', 'time');
+	        ticketDiv.append(h, l, t);
+         	if(i<=4)
+         	{
+	        	$("#eventsLeft").append(ticketDiv);
+	        }
+	        else
+	        {
+	        	$("#eventsRight").append(ticketDiv);
+	        }
+	      }
+	    }
+	    return false;
+    });
+		search = search.split('-').join('+');
+		$("#newsLeft").empty();
+		$("#newsCenter").empty();
+		$("#newsRight").empty();
+		var key = keys[Math.floor(Math.random())];
+		//AJAX call to search for news articles
+		$.ajax({
+		  url: 'https://www.googleapis.com/customsearch/v1?q=' + search + '&cx=011101858926978562708%3Abyfxhjvymhs&key=' + key,
+		  method: 'GET'
+		}).done(function(response) {
+		  //Gets 9 articles from response
+		  for(var i = 1; i < 10; i++)
+		  {
+		   	//Stores object data of the articles
+		    var currentStory = response.items[i];
+		    //Stores data pulled from the page of the article
+		    var currentStoryPagemap = response.items[i].pagemap;
+		    //The all encompassing div that contains all data for a particular story
+		    var newsDiv = $('<div>');
+		    newsDiv.addClass('well');
+		    //The title of the news story
+		    var newsTitle = $('<h3>');
+		    newsTitle.addClass('newsTitle');
+		    newsTitle.html(currentStoryPagemap.article[0].name);
+		    //Adds news title to the individual news story div
+		    newsDiv.append(newsTitle);
+		    //The article body. A snippet of the actual article. Will contain the thumbnail image in the p tag for formatting
+				var newsBody = $('<p>');
+				//Thumbnail image tag
+		    var newsImg = $('<img>');
+		    newsImg.attr('src', currentStoryPagemap.cse_thumbnail[0].src);
+		    newsImg.addClass('newsPics');
+		    newsBody.append(newsImg);
+		    newsBody.addClass('articlebody');
+		    newsBody.append(currentStoryPagemap.article[0].articlebody);
+		    //Adds the body, containing snippet and image, to individual news story div
+		    newsDiv.append(newsBody);
+		    newsDiv.append('<br>');
+		    //The link to the article on bleacherreport
+		    var newsLink = $('<a>');
+		    newsLink.addClass('newsLink');
+		    newsLink.attr('href', currentStoryPagemap.article[0].url)
+		    newsLink.html('read more');
+		    //Appends the link to the individual news story div
+		    newsDiv.append(newsLink);
+		    //Date the article was published
+		    var datePub = $('<p>');
+        datePub.addClass('datePub');
+        datePub.html("Date: " +currentStoryPagemap.article[0].datepublished);
+        //Appends date to news story div
+        newsDiv.append(datePub);
+        //Displays news stories horizontally, 3 per row
+		    if(i == 1 || i == 4 || i == 7)
+		    {
+		      $('#newsLeft').append(newsDiv);
+		    }
+		    if(i == 2 || i == 5 || i == 8)
+		    {
+		      $('#newsCenter').append(newsDiv);
+		    }
+		    if(i == 3 || i == 6 || i == 9)
+		    {
+		      $('#newsRight').append(newsDiv);
+		    }
+		  }
+		});	
+		return false;		//will keep results and not auto refresh
+	});
+  window.onload = function(){
+	  var today = moment().format("YYYY-MM-DD");
+    var queryURL2 = "https://api.seatgeek.com/2/events?taxonomies.name=sports&datetime_utc.gt=" + today;
+		$.ajax({
+	    url: queryURL2,
+	    method: 'GET'
+	  }).done(function(response) {
+	   	$('#eventsLeft').empty();
+	   	$('#eventsRight').empty();
+	   	ticketResults2=[];
+	   	for(i=0;i<10;i++)
+	   	{
+	  		ticketResults2[i] = {
+	  			name: response.events[i].title,
+	  			location: response.events[i].venue.display_location,
+	  			time: toNiceDate(response.events[i].datetime_local),
+	  			url: response.events[i].url
+	  		}
+	  		var ticketDiv = $('<div id="item2" data-number=' + i+'>')
+	  		ticketDiv.addClass('well');
+		 		var h = $('<h3>').text(ticketResults2[i].name);
+		 		h.attr('class', 'heading');
+		 		var l = $('<p>').text('Location:  ' + ticketResults2[i].location);
+		  	var t = $('<p>').text('Time:  ' + ticketResults2[i].time);
+		  	t.attr('class', 'time');
+		  	var u = ticketDiv.append(h, l, t);
+		  	if(i<=4)
+		  	{
+		    	$("#eventsLeft").append(ticketDiv);
+		    }
+		    else
+		    {
+		    	$("#eventsRight").append(ticketDiv);
+		    }
+	    }
+	  });
+	}
+	$('button').on('click', function() {
 		$("#merchandise").empty();
 		var search = $('#teamName2').val().trim()
-
-console.log(search)
-
-console.log("Steelers")
-var queryURL = "https://crossorigin.me/http://svcs.ebay.com/services/search/FindingService/v1?OPERATION-NAME=findItemsAdvanced&SERVICE-VERSION=1.0.0&SECURITY-APPNAME=Mr-ClutchSp-PRD-b3a0284bf-14486c0c&RESPONSE-DATA-FORMAT=JSON&REST-PAYLOAD=true&paginationInput.entriesPerPage=20&keywords="+search;
-
-
-$.ajax({url: queryURL, method: 'GET'}).done(function(response) {
-	var results = JSON.parse(response);	
-	var searchResults = results.findItemsAdvancedResponse[0].searchResult[0];
-	
-	$.each(searchResults.item, function(){
-		
-		var merchandiseDiv = $("<div>");
-		merchandiseDiv.addClass("well")
-		merchandiseDiv.attr("id","merchandiseDiv")
-
-		console.log(this.title[0]);
-		console.log(this.galleryURL[0]);
-		console.log(this.viewItemURL[0]);
-		console.log(this.sellingStatus[0].currentPrice[0]["@currencyId"]);
-		console.log(this.sellingStatus[0].currentPrice[0]["__value__"]);
-
-		var imageLink = (this.galleryURL[0])
-		console.log(imageLink);
-		var image = $("<img>");
-		image = image.attr("src",imageLink);
-
-		var ebayLink = (this.viewItemURL[0]);
-		var listing = $("<a>" + "View EBAY Listing" + "</a>");
-		listing.attr("href",ebayLink);
-		listing.html("<img src = "+imageLink+">")
-
-
-
-		var title = $("<h3>");
-		title.text(this.title[0]);
-		var currency = $("<p>");
-		currency.text(this.sellingStatus[0].currentPrice[0]["@currencyId"] + " $" + this.sellingStatus[0].currentPrice[0]["__value__"])
-		// var listing = 
-
-
-		
-		$(merchandiseDiv).append(title);
-		$(merchandiseDiv).append(currency);
-		//$(".merchandiseDiv").append(this.sellingStatus[0].currentPrice[0]["__value__"]+"<br>"); 
-		$(merchandiseDiv).append(listing);
-		$("#merchandise").append(merchandiseDiv);
-		
+		var queryURL = "https://crossorigin.me/http://svcs.ebay.com/services/search/FindingService/v1?OPERATION-NAME=findItemsAdvanced&SERVICE-VERSION=1.0.0&SECURITY-APPNAME=Mr-ClutchSp-PRD-b3a0284bf-14486c0c&RESPONSE-DATA-FORMAT=JSON&REST-PAYLOAD=true&paginationInput.entriesPerPage=20&keywords="+search;
+		$.ajax({
+			url: queryURL,
+			method: 'GET'
+		}).done(function(response){
+			var results = JSON.parse(response);	
+			var searchResults = results.findItemsAdvancedResponse[0].searchResult[0];
+			$.each(searchResults.item, function(){
+				var merchandiseDiv = $("<div>");
+				merchandiseDiv.addClass("well")
+				merchandiseDiv.attr("id","merchandiseDiv")
+				var imageLink = (this.galleryURL[0])
+				console.log(imageLink);
+				var image = $("<img>");
+				image = image.attr("src",imageLink);
+				var ebayLink = (this.viewItemURL[0]);
+				var listing = $("<a>" + "View EBAY Listing" + "</a>");
+				listing.attr("href",ebayLink);
+				listing.html("<img src = "+imageLink+">")
+				var title = $("<h3>");
+				title.text(this.title[0]);
+				var currency = $("<p>");
+				currency.text(this.sellingStatus[0].currentPrice[0]["@currencyId"] + " $" + this.sellingStatus[0].currentPrice[0]["__value__"])
+				// var listing = 
+				$(merchandiseDiv).append(title);
+				$(merchandiseDiv).append(currency);
+				//$(".merchandiseDiv").append(this.sellingStatus[0].currentPrice[0]["__value__"]+"<br>"); 
+				$(merchandiseDiv).append(listing);
+				$("#merchandise").append(merchandiseDiv);	
+			});
+		});
 	});
-
+  $('body').on('click', '#item', function() {
+	 	var index = $(this).data('number');
+	 	window.location = ticketResults[index].url;
 	});
-});
-
-
-	        };
-
-
-	        $('body').on('click', '#item', function() {
-	        	var index = $(this).data('number');
-	        	window.location = ticketResults[index].url;
-
-	        });
-	        $('body').on('click', '#item2', function() {
-	        	var index = $(this).data('number');
-	        	window.location = ticketResults2[index].url;
-
-	        });
-
-
+	$('body').on('click', '#item2', function() {
+	 	var index = $(this).data('number');
+	 	window.location = ticketResults2[index].url;
+	});
 	</script>
 </html>
